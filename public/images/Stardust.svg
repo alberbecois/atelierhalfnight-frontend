@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1001 1001" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-39.7378,-39.7378)">
+        <g id="Star-Dust" serif:id="Star Dust">
+            <g transform="matrix(0.878047,0,0,0.878047,41.4595,98.5244)">
+                <circle cx="567.784" cy="502.793" r="443.413" style="fill:none;stroke:rgb(232,203,130);stroke-width:4.56px;stroke-dasharray:1.14,13.67,0,0,0,0;"/>
+            </g>
+            <g transform="matrix(1.1237,0,0,1.1237,-98.0176,-24.9876)">
+                <circle cx="567.784" cy="502.793" r="443.413" style="fill:none;stroke:rgb(232,203,130);stroke-width:3.56px;stroke-dasharray:0.89,10.68,0,0,0,0;"/>
+            </g>
+        </g>
+    </g>
+</svg>

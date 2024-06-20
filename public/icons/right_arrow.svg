@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 346 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-227.273,-0.000453138)">
+        <path id="Right-Arrow" serif:id="Right Arrow" d="M565.456,378.172L292.73,14.548C280.677,-1.52 257.889,-4.773 241.822,7.275C225.754,19.326 222.498,42.119 234.549,58.184L490.911,399.993L234.549,741.816C222.498,757.881 225.756,780.676 241.822,792.725C248.362,797.632 256.018,800 263.611,800C274.667,800 285.586,794.977 292.73,785.452L565.456,421.808C575.153,408.88 575.153,391.101 565.456,378.172Z" style="fill:rgb(31,41,55);fill-rule:nonzero;"/>
+    </g>
+</svg>
