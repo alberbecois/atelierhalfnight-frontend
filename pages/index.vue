@@ -7,13 +7,14 @@ import Axios from 'axios';
 const ig_endpoint = import.meta.env.VITE_IG_API_ENDPOINT;
 const ig_token = import.meta.env.VITE_INSTAGRAM_TOKEN;
 let portfolio = ref([]);
-Axios.get(`${ig_endpoint}${ig_token}`)
-    .then(function (response) {
-        portfolio.value = response.data.data.filter((el) => el.media_type == "IMAGE");
-    })
-    .catch(function (error) {
+await useFetch(`${ig_endpoint}${ig_token}`, {
+    onResponse({ request, response, options }) {
+        portfolio.value = response._data.data.filter((el) => el.media_type == "IMAGE");
+    },
+    onRequestError({ request, options, error }) {
         console.log(error);
-});
+    }
+})
 
 // Animations
 onMounted(() => {
@@ -48,7 +49,7 @@ onMounted(() => {
     )
     gsap.to(
         "#magicCircle",
-        { rotation: 360, duration: 20, repeat: -1, ease: "none" }
+        { rotation: 360, duration: 20, repeat: -1, ease: "linear" }
     )
     gsap.to(
         ".star-group-one",
@@ -58,22 +59,6 @@ onMounted(() => {
         ".star-group-two",
         { rotation: -360, duration: 20, repeat: -1, ease: "linear", delay: 0.05 }
     )
-    gsap.to(
-        "#topOuter",
-        { rotation: 360, duration: 20, repeat: -1, ease: "none" }
-    )
-    gsap.to(
-        "#topInner",
-        { rotation: 360, duration: 10, repeat: -1, ease: "none" }
-    )
-    gsap.to(
-        "#bottomOuter",
-        { rotation: -360, duration: 20, repeat: -1, ease: "none" }
-    )
-    gsap.to(
-        "#bottomInner",
-        { rotation: -360, duration: 10, repeat: -1, ease: "none" }
-    )
 });
 
 </script>
@@ -81,7 +66,7 @@ onMounted(() => {
 <template>
     <!-- Hero Section -->
     <section id="hero">
-        <div class="grid max-w-screen-xl px-4 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
                 <div class="relative -z-50">
                     <img class="absolute" id="magicCircle" src="/images/MagicCircle.svg" />
@@ -127,10 +112,6 @@ onMounted(() => {
 
     <!-- Gallery Section -->
     <section class="bg-starTexture bg-cover relative">
-        <img class="absolute top-5 left-5 w-[32.5rem]" src="/images/StarCircle.svg" id="topOuter"/>
-        <img class="absolute top-[5rem] md:left-[5rem] w-[25rem]" src="/images/StarCircle.svg" id="topInner"/>
-        <img class="absolute bottom-5 md:right-5 w-[32.5rem]" src="/images/StarCircle.svg" id="bottomOuter"/>
-        <img class="absolute bottom-[5rem] md:right-[5rem] w-[25rem]" src="/images/StarCircle.svg" id="bottomInner"/>
         <div class="absolute w-full h-full bg-zinc-600 bg-opacity-70"></div>
         <div class="relative pt-6"><h1 class="text-white font-light font-crimson text-3xl text-center">Recent Artworks</h1></div>
         <div class="relative z-10" v-if="(portfolio.length > 0)">

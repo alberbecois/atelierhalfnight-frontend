@@ -59,8 +59,8 @@ onMounted(() => {
                     <li class="hover:text-yellow-600" :class="{ 'transition ease-in-out text-yellow-600': !scrolling && route.fullPath == '/blog', 'transition ease-in-out text-stone-400': scrolling && route.fullPath == '/blog' }">
                         <NuxtLink to="/blog">Blog</NuxtLink>
                     </li>
-                    <li class="hover:text-yellow-600" :class="{ 'transition ease-in-out text-yellow-600': !scrolling && route.fullPath == '/shop', 'transition ease-in-out text-stone-400': scrolling && route.fullPath == '/shop' }">
-                        <NuxtLink to="/shop">Shop</NuxtLink>
+                    <li class="hover:text-yellow-600">
+                        <a href="http://atelierhalfnight.bigcartel.com" target="_blank">Shop</a>
                     </li>
                 </ul>
             </nav>
