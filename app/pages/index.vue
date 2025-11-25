@@ -165,6 +165,6 @@ onMounted(() => {
 <style scoped>
 #hero {
     background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 60%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 85%);
 }
 </style>

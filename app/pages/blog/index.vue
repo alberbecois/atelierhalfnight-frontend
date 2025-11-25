@@ -12,6 +12,14 @@ const formatDate = (date) => {
 
     return [year, month, day].join('.');
 }
+
+const { data: docs } = await useAsyncData('blogs', () => {
+  return queryCollection('docs')
+    .where('draft', '=', 'false')
+    .order('date', 'DESC')
+    .select('title', 'year', 'slug', 'date', 'description')
+    .all()
+})
 </script>
 
 <template>
@@ -25,27 +33,10 @@ const formatDate = (date) => {
             </div>
             <div class="grid grid-cols-12 gap-5 ps-10 xl:ps-0">
                 <div class="col-span-6 pt-20">
-                    <ContentList 
-                        path="/posts" 
-                        v-slot="{ list }"
-                        :query="{
-                            draft: false,
-                            sort: [{
-                                date: -1
-                            }]
-                        }"
-                    >
-                        <div 
-                            v-for="post in list"
-                            :key="post._path"
-                            class="pb-3"
-                        >
-                            <hr class="border-stone-400">
-                            <span class="pe-5 font-bold">{{ formatDate(post.date) }}</span>
-                            <h3 class="py-4 inline-block font-crimson text-lg"><NuxtLink :to="`/blog/${post.year}/${post.slug}`">{{ post.title }}</NuxtLink></h3>
-                            <hr class="border-stone-400">
-                        </div>
-                    </ContentList>
+                    <NuxtLink v-for="doc in docs" :key="doc.slug" :to="doc.year +'/'+ doc.slug">
+                        <h2>{{ doc.title }}</h2>
+                        <p>{{ doc.description }}</p>
+                    </NuxtLink>
                 </div>
                 <div class="col-span-6">
                     <img src="/images/Sabine.png" />

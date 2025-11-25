@@ -13,18 +13,7 @@ export default defineNuxtConfig({
         ital: [100, 200, 300, 400, 500, 600, 700, 800, 900]
       }
     }
-  }], "nuxt-medusa", "@nuxt/content", "@nuxt/image"],
-  content: {
-    sources: {
-      github: {
-        driver: "github",
-        repo: "alberbecois/blog",
-        branch: "main",
-        token: import.meta.env.VITE_GITHUB_TOKEN_NOEXP,
-        prefix: "/posts"
-      }
-    }
-  },
+  }],"@nuxt/content", "@nuxt/image"],
   app: {
     head: {
       title: 'Atelier Halfnight',
