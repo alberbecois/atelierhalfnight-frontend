@@ -20,7 +20,7 @@ export default defineContentConfig({
         year: z.bigint(),
         date: z.date(),
         thumbnail: z.string(),
-        draft: z.boolean(),
+        draft: z.string(),
         tags: z.array(z.string()),
       })
     })

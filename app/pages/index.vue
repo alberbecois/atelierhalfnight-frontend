@@ -82,7 +82,7 @@ onMounted(() => {
                     what I do, my shop. Treat yourself to something. I won't tell anybody.
                     </p>
                     <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                        <a href="" target="_blank"
+                        <a href="https://github.com/alberbecois/atelierhalfnight-frontend" target="_blank"
                             class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
                             <svg class="w-4 h-4 mr-2 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 496 512">

@@ -75,11 +75,11 @@
                 <div>
                     <h2 class="mb-6 text-sm font-poppins text-white uppercase">The Atelier</h2>
                     <ul class="text-stone-500 font-medium">
-                        <li class="mb-4">
-                            <a href="#" class="font-semibold hover:text-white">About</a>
+                        <li class="mb-4 hover:text-yellow-600">
+                            <NuxtLink to="/about">About</NuxtLink>
                         </li>
-                        <li class="mb-4">
-                            <a href="#" class="font-semibold hover:text-white">Events</a>
+                        <li class="mb-4 hover:text-yellow-600">
+                            <NuxtLink to="/events">Events</NuxtLink>
                         </li>
                         <li class="mb-4">
                             <a href="#" class="font-semibold hover:text-white">Contact</a>
@@ -117,7 +117,7 @@
         <!-- Socials -->
         <hr class="my-6 border-white-200 sm:mx-auto lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-white sm:text-center">© 2024 Atelier Halfnight. All Rights Reserved.
+            <span class="text-sm text-white sm:text-center">© 2025 Atelier Halfnight. All Rights Reserved.
             </span>
             <div class="flex mt-4 sm:justify-center sm:mt-0">
                 <a href="https://youtube.com/@atelierhalfnight" class="text-white hover:text-gray-500">
